@@ -4,4 +4,23 @@ body{
 
 .header{
     background-image: url(../media/cat.gif);
+    margin-bottom: 20px;
+    background-color: #F6EFEB;
+    text-align: center;
+}
+
+.button{
+    background-color: #24201D;
+    color: #FFFFFF;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.button:hover{
+    background-color: #534842;
 }
