@@ -1,3 +1,7 @@
 body{
     background-color: #DFD7D2;
 }
+
+.header{
+    background-image: url(../images/loading.gif);
+}
