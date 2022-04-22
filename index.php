@@ -15,10 +15,13 @@
         <img src="media/cattt.gif" alt="Moving cat gif" />
     </div>
     <div>
-        <a class="button" href="home.php">Home</a>
+        <a class="button" href="index.php">Home</a>
         <a class="button" href="info.php">Info</a>
         <a class="button" href="quiz.php">Quiz</a>
     </div>
+
+
+    
 
 </body>
 
