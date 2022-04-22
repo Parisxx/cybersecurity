@@ -21,7 +21,7 @@
     </div>
     <h1>Quiz </h1>
     <div>
-        <a class="quiz-button" href="">Start quiz</a>
+        <a class="quiz-button" href="questions.php">Start quiz</a>
     </div>
 
 </body>
