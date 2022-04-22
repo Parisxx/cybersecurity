@@ -20,6 +20,10 @@
         <a class="button" href="quiz.php">Quiz</a>
     </div>
 
+    <div>
+        <a class="quiz-button" href="">Start quiz</a>
+    </div>
+
 </body>
 
 </html>

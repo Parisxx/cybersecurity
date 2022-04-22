@@ -28,3 +28,39 @@ body{
 .button:hover{
     background-color: #534842;
 }
+
+.button:active{
+    background-color: #62544d;
+}
+
+
+.quiz-button{
+    background-color: #796D69;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 18px;
+    float: left;
+    margin-top: 10%;
+    margin-left: 45%;
+    font-size: 23px;
+}
+
+.quiz-button:hover{
+    background-color: #ad9a93;
+}
+
+.home-text{
+    font-size: 25px;
+    text-align: center;
+}
+
+.info{
+text-align: center;
+}
+
+.info-text{
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
