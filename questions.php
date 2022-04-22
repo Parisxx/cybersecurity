@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  include 'functions.php';
+  get_questions();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,44 +26,29 @@
 
 
 
-    <!-- k -->
 
-
-   <?php
-	  include 'functions.php';
-  	  $quesions = $db->get_questions();
-   ?>
-
-
-    <div class="container">
-
-        <div class="form-group">
-            <form action="score.php" method="post">
-<?php
-foreach($quesions as $ques) {
-$options = $db->quiz_options($ques[0]);
+    
+    <form action="score.php" method="post">
+        <?php
+foreach($questions as $quest) {
+$options = $db->quiz_options($quest[0]);
 }
 ?>
 
-<h4><?php echo $ques[1]; ?></h4>
-<div class="input-group-text" style="text-align: left; font-size: 18px;">
-<ol>
+        <h4><?php echo $quest[1]; ?></h4>
+        <div class="input-group-text" style="text-align: left; font-size: 18px;">
+            <ol>
 
-<?php
+                <?php
 foreach($options as $option) { 
-echo "<li><input type='radio' name='".$option[2]."' value='".$option[1]."' required/> ".$option[3]."</li>";
+echo "<p><input type='radio' name='".$option[2]."' value='".$option[1]."' required/> ".$option[3]."</p>";
 }
 ?>
-                    </ol>
-                </div>
+            </ol>
 
-        </div>
-        <div class="form-group">
             <input type="submit" value="Submit" name="submit" class="btn btn-primary" />
-        </div>
-        </form>
-    </div>
-    <!-- k -->
+
+    </form>
 
 
 
