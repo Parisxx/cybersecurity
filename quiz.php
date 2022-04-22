@@ -23,6 +23,7 @@
     <div>
         <a class="quiz-button" href="questions.php">Start quiz</a>
     </div>
+    <img src="./media/tipcat.png" width="470px" height="420px" class="tips">
 
 </body>
 
