@@ -20,7 +20,7 @@
         <a class="button" href="quiz.php">Quiz</a>
     </div>
 
-    <h1>Info </h1>
+    <h1>Information </h1>
     <h3 class="info">Cybersecurity </h3>
     <p class="info-text">Example text about cyberecurity. Written in an easy way for children to understand.
         Example text about cyber security. Written in an easy and fun way for children to understand

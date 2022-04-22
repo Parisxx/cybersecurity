@@ -19,7 +19,7 @@
         <a class="button" href="info.php">Info</a>
         <a class="button" href="quiz.php">Quiz</a>
     </div>
-
+    <h1>Quiz </h1>
     <div>
         <a class="quiz-button" href="">Start quiz</a>
     </div>
