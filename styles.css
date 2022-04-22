@@ -50,7 +50,13 @@ body{
     background-color: #ad9a93;
 }
 
-.home-text{
+.home-text1{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.home-text2{
     font-size: 25px;
     text-align: center;
 }

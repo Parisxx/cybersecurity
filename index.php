@@ -21,8 +21,8 @@
     </div>
 
 
-    <p class="home-text"> Welcome to the cybersecurity website</p>
-    <p class="home-text"> Learn more about how to be safe on the internet! Meow meow! </p>
+    <p class="home-text1"> Welcome to the cybersecurity website</p>
+    <p class="home-text2"> Learn more about how to be safe on the internet! Meow meow! </p>
 
 </body>
 
