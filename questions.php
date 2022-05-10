@@ -1,7 +1,7 @@
 <?php
   session_start();
   include 'functions.php';
-  get_questions();
+  $question = get_questions($conn);
 ?>
 
 <!DOCTYPE html>
@@ -27,28 +27,25 @@
 
 
 
-    
-    <form action="score.php" method="post">
-        <?php
-foreach($questions as $quest) {
-$options = $db->quiz_options($quest[0]);
-}
+
+<form action="score.php" method="post">
+
+<?php
+$option = $db->quiz_options($question[0]);
 ?>
 
-        <h4><?php echo $quest[1]; ?></h4>
-        <div class="input-group-text" style="text-align: left; font-size: 18px;">
-            <ol>
+<h4><?php echo $question[1]; ?></h4>
 
-                <?php
-foreach($options as $option) { 
+
+<ol>
+<?php
 echo "<p><input type='radio' name='".$option[2]."' value='".$option[1]."' required/> ".$option[3]."</p>";
-}
 ?>
-            </ol>
+</ol>
 
-            <input type="submit" value="Submit" name="submit" class="btn btn-primary" />
+<input type="submit" value="Submit" name="submit" />
 
-    </form>
+</form>
 
 
 
