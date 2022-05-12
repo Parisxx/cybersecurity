@@ -26,27 +26,20 @@
 
 
 
-
-<form action="score.php" method="post">
-
 <?php
-$option = $db->quiz_options($question[0]);
+    $sql = "SELECT * FROM quiz WHERE id= '4'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+    echo "<h3 class='question'>" . $row['question'] . "</h3>";
+    echo "<a class='button_answer_first'>" . $row['ans1'] . "</a>";
+    echo "<a  href='score.php' class='button_answer'>" . $row['ans2'] . "</a>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<a class='button_answer_first'>" . $row['ans3'] . "</a>";
+    echo "<a class='button_answer'>" . $row['ans4'] . "</a>";
+    }
 ?>
-
-<h4><?php echo $question[1]; ?></h4>
-
-
-<ol>
-<?php
-echo "<p><input type='radio' name='".$option[2]."' value='".$option[1]."' required/> ".$option[3]."</p>";
-?>
-</ol>
-
-<input type="submit" value="Submit" name="submit" />
-
-</form>
-
-
 
 
 </body>

@@ -1,75 +1,69 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Gegenereerd op: 12 mei 2022 om 10:11
+-- Serverversie: 10.4.21-MariaDB
+-- PHP-versie: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-CREATE TABLE `questions` (
-  `q_id` int(11) NOT NULL,
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cybersecurity`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `quiz`
+--
+
+CREATE TABLE `quiz` (
+  `id` int(11) NOT NULL,
   `question` varchar(255) NOT NULL,
-  `is_enabled` int(11) NOT NULL
+  `ans1` varchar(255) NOT NULL,
+  `ans2` varchar(255) NOT NULL,
+  `ans3` varchar(255) NOT NULL,
+  `ans4` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `quiz`
+--
 
+INSERT INTO `quiz` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`) VALUES
+(1, 'Vraag?', 'Answer 1.', 'Answer 2.', 'Answer 3.', 'Answer 4.');
 
-INSERT INTO `questions` (`q_id`, `question`, `is_enabled`) VALUES
-(1, 'What is cybersecurity?', 1),
-(2, 'Question?', 1);
+--
+-- Indexen voor geëxporteerde tabellen
+--
 
-/**/
+--
+-- Indexen voor tabel `quiz`
+--
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`id`);
 
-CREATE TABLE `quiz_answer` (
-  `qa_id` int(11) NOT NULL,
-  `q_id` int(11) NOT NULL,
-  `option_number` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- AUTO_INCREMENT voor geëxporteerde tabellen
+--
 
-
-INSERT INTO `quiz_answer` (`qa_id`, `q_id`, `option_number`) VALUES
-(1, 1, 2),
-(2, 2, 1);
-
-/**/
-
-CREATE TABLE `quiz_options` (
-  `option_id` int(11) NOT NULL,
-  `q_id` int(11) NOT NULL,
-  `option` varchar(255) NOT NULL,
-  `is_enabled` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-INSERT INTO `quiz_options` (`option_id`, `q_id`, `option`, `is_enabled`) VALUES
-(1, 1, 'Answer.', 1),
-(2, 1, 'Answer.', 1),
-(3, 1, 'Answer.', 1),
-(4, 1, 'Answer', 1),
-(5, 2, 'Answer.', 1),
-(6, 2, 'Answer.', 1),
-(7, 2, 'Answer.', 1),
-(8, 2, 'Answer.', 1);
-
-
-ALTER TABLE `questions`
-  ADD PRIMARY KEY (`q_id`);
-
-
-ALTER TABLE `quiz_answer`
-  ADD PRIMARY KEY (`qa_id`);
-
-
-ALTER TABLE `quiz_options`
-  ADD PRIMARY KEY (`option_id`);
-
-
-ALTER TABLE `questions`
-  MODIFY `q_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
-
-ALTER TABLE `quiz_answer`
-  MODIFY `qa_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
-
-ALTER TABLE `quiz_options`
-  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT voor een tabel `quiz`
+--
+ALTER TABLE `quiz`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
