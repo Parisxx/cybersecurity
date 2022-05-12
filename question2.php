@@ -1,6 +1,6 @@
 <?php
+  session_start();
   include 'functions.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -23,12 +23,23 @@
         <a class="button" href="quiz.php">Back</a>
     </div>
 
-<h2 class="score"> You did well! You scored 10 out of 10. </h2>
-
-<img src="./media/tipcat2.png" width="470px" height="420px" class="tips">
 
 
 
+<?php
+    $sql = "SELECT * FROM quiz WHERE id= '2'";
+    $result = $conn->query($sql);
+    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+    echo "<h3 class='question'>" . $row['question'] . "</h3>";
+    echo "<a class='button_answer_first'>" . $row['ans1'] . "</a>";
+    echo "<a class='button_answer'>" . $row['ans2'] . "</a>";
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "<a  href='question3.php' class='button_answer_first'>" . $row['ans3'] . "</a>";
+    echo "<a class='button_answer'>" . $row['ans4'] . "</a>";
+    }
+?>
 
 
 </body>

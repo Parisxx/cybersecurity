@@ -80,14 +80,57 @@ text-align: center;
 }
 
 .tips{
-    
     display: block;
     margin-left: 70%;
-    
     width: 30%;
+}
+
+.result{
+    text-align: center;
+}
+
+
+.button_answer{
+    background-color: #24201D;
+    color: #FFFFFF;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+
+}
+
+.button_answer:hover{
+    background-color: #534842;
+}
+
+.question{
+    text-align: center;
+}
+
+.button_answer_first{
+    background-color: #24201D;
+    color: #FFFFFF;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-decoration: none;
+    font-size: 20px;
+
+    margin-left: 30%;
 
 
 }
 
+.button_answer_first:hover{
+    background-color: #534842;
+}
 
+.score{
+    text-align: center;
+}
 

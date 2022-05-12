@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 22 apr 2022 om 10:53
+-- Gegenereerd op: 12 mei 2022 om 10:11
 -- Serverversie: 10.4.21-MariaDB
 -- PHP-versie: 8.0.10
 
@@ -24,83 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `questions`
+-- Tabelstructuur voor tabel `quiz`
 --
 
-CREATE TABLE `questions` (
-  `q_id` int(11) NOT NULL,
+CREATE TABLE `quiz` (
+  `id` int(11) NOT NULL,
   `question` varchar(255) NOT NULL,
-  `is_enabled` int(11) NOT NULL
+  `ans1` varchar(255) NOT NULL,
+  `ans2` varchar(255) NOT NULL,
+  `ans3` varchar(255) NOT NULL,
+  `ans4` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Tabelstructuur voor tabel `quiz_answer`
+-- Gegevens worden geëxporteerd voor tabel `quiz`
 --
 
-CREATE TABLE `quiz_answer` (
-  `qa_id` int(11) NOT NULL,
-  `q_id` int(11) NOT NULL,
-  `option_number` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `quiz_options`
---
-
-CREATE TABLE `quiz_options` (
-  `option_id` int(11) NOT NULL,
-  `q_id` int(11) NOT NULL,
-  `option` varchar(255) NOT NULL,
-  `is_enabled` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `quiz` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`) VALUES
+(1, 'Vraag?', 'Answer 1.', 'Answer 2.', 'Answer 3.', 'Answer 4.');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexen voor tabel `questions`
+-- Indexen voor tabel `quiz`
 --
-ALTER TABLE `questions`
-  ADD PRIMARY KEY (`q_id`);
-
---
--- Indexen voor tabel `quiz_answer`
---
-ALTER TABLE `quiz_answer`
-  ADD PRIMARY KEY (`qa_id`);
-
---
--- Indexen voor tabel `quiz_options`
---
-ALTER TABLE `quiz_options`
-  ADD PRIMARY KEY (`option_id`);
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT voor een tabel `questions`
+-- AUTO_INCREMENT voor een tabel `quiz`
 --
-ALTER TABLE `questions`
-  MODIFY `q_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT voor een tabel `quiz_answer`
---
-ALTER TABLE `quiz_answer`
-  MODIFY `qa_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT voor een tabel `quiz_options`
---
-ALTER TABLE `quiz_options`
-  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `quiz`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
